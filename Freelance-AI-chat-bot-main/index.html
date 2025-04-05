@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelance Job Finder</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="Logo">
+        <img src="lpuLogo.png" alt="Logo" width="60px" height="60px">
+    </div>
+    <div class="students">
+        <ul>
+            Om Rawat 12308516 <br>
+            Amrutha.M 12319844 <br>
+            Lkhagva Ochir 12325163 <br>
+        </ul>
+    </div>
+    <div class="app-container">
+        <header class="app-header">
+            <h1>Freelance Job Finder</h1>
+            <div class="connection-status" id="connection-status">
+                <span class="status-dot"></span>
+                <span class="status-text">Connecting...</span>
+            </div>
+        </header>
+        
+        <div class="chat-container">
+            <div class="chat-messages" id="chat-messages">
+            </div>
+            
+            <div class="chat-controls">
+                <div class="typing-indicator" id="typing-indicator">
+                    <span>typing...</span>
+                    <div class="typing-dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                
+                <div class="input-area">
+                    <input type="text" id="user-input" placeholder="Ask for jobs..." autocomplete="off">
+                    <button id="send-button"><i class="fas fa-paper-plane"></i></button>
+                    <button id="voice-button"><i class="fas fa-microphone"></i></button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="job-filters" id="job-filters">
+            <h3>Filter Jobs</h3>
+            <div class="filter-options">
+                <select id="job-category">
+                    <option value="">All Categories</option>
+                    <option value="development">Development</option>
+                    <option value="design">Design</option>
+                    <option value="writing">Writing</option>
+                    <option value="marketing">Marketing</option>
+                </select>
+                
+                <select id="job-type">
+                    <option value="">All Types</option>
+                    <option value="full-time">Full-time</option>
+                    <option value="part-time">Part-time</option>
+                    <option value="contract">Contract</option>
+                </select>
+                
+                <input type="text" id="location-filter" placeholder="Location">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
